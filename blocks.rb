@@ -27,3 +27,8 @@ end
 
 puts array.inspect
 
+array = [1, 2, 3, 4]
+
+1.upto(array.length - 1) do |x|
+  puts array[x].to_s
+end
