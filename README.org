@@ -1,0 +1,4 @@
+
+* About
+  This is all the code I wrote until last update in Ruby. 
+  If you find this stuff useful, fork and add some new stuff..
