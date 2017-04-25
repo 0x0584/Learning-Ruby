@@ -1,7 +1,7 @@
 ## Author:       Anas Rchid <rchid.anas@gmail.com>
 ## Creating:     04/23/2017
 
-# Insertion Sort Algorithm: 
+# Algorithm: Insertion Sort 
 # we begin with an unsorted array (the passed array)
 # and a space for sorted array, which contains no element
 # at the beginning, one at a time, we remove an element
