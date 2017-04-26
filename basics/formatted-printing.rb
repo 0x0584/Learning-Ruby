@@ -18,3 +18,24 @@ this\t is a piece\n of text
 NAME
 
 puts cool
+
+### PART II: another way using symboles
+## RUBY_VERSION: ruby 2.3.3p222 [x86_64-linux]
+
+format = "%{one} %{two} %{three}%{four}"
+
+# This Works fine
+puts format % {
+  one:"cool",
+  two:"nice",
+  three:"I Just ",
+  four:"learned this one!"
+}
+
+# This does not work at all
+puts format % {
+  one:"cool",
+  two:"nice",
+  four:"learned this one!"
+}
+

@@ -20,3 +20,9 @@ left = "string"
 right = "string"
 
 print left + right
+
+test = """
+this is a test
+"""
+
+puts test
