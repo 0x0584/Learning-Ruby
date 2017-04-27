@@ -14,12 +14,18 @@ file = open(bak, "w")           # open file in write mode
 file.write("# this file was generated" + content.read)
 file.close
 
-### PART II: emptie a file
+### PART III: some other stuff
 ##
 
-file = open(bak)           # open file in write mode
-puts file.read
-#file.truncate(0)                # uncomment to take effect
-file.close
 
+file = open(bak)           # open file in write mode
+
+puts file.read
+#file.truncate(0)           # empties a file :uncomment to take effect:
+
+#file.seek(0)                    # :uncomment if you want it to work:
+puts file.gets.chomp
+
+file.close
 content.close                   # always close the opened file!
+
