@@ -25,3 +25,19 @@ baz()                           # this way
 baz                             # or this way
 #baz 2                           # this would rise an error!
 
+### PART II: functions with return
+##
+
+def this_return_one()
+  return 1
+end
+
+one = this_return_one           # with or without parans
+puts one
+
+def this_returns_one_too()
+  1
+end
+
+another_one = this_returns_one_too() # with or without parans
+puts another_one
