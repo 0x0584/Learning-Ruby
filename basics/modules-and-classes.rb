@@ -1,7 +1,7 @@
 ### PART I: Modules
 ##
-
-module Vehicle
+  
+module Vehicle                  # or this: Vehicle = Module.new do
   def wheels
     4
   end
@@ -10,10 +10,24 @@ module Vehicle
   end
 end
 
+### PART II: Classes
+##
+
 class Car
   include Vehicle
+  @name = ""
+
+  def set(value)
+    @name = value
+  end
+  def get
+    @name
+  end
 end
 
-c = Car.new
+## TESTING
 
+c = Car.new
 puts c.brand("foo").to_s + " " + c.wheels.to_s
+c.set("carr")
+puts c.get
