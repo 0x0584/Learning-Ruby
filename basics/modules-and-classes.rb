@@ -1,6 +1,6 @@
 ### PART I: Modules
 ##
-  
+
 module Vehicle                  # or this: Vehicle = Module.new do
   def wheels
     4
@@ -10,35 +10,45 @@ module Vehicle                  # or this: Vehicle = Module.new do
   end
 end
 
-### PART II: Classes
-##
-
 class Car
   include Vehicle
-  @name = ""
-  @number = ""
-  @id = ""
-  def initialize (name, number, id = '00')
-    @name = name
-    @number = number
-    @id = id
-  end
-  def set(value)
-    @name = value
-  end
-  def get
-    @name
-  end
-  # or simply
-  def name= name
-    @name = name
-  end
 end
 
 ## TESTING
 
 c = Car.new
-puts c.brand("foo").to_s + " " + c.wheels.to_s
-c.set("carr")
-puts c.get
-c.initialize("foo", 10)
+puts c.brand("foo")
+
+### PART II: Classes
+##
+
+class Person
+  @name = ""
+  @age = 0
+  @job = "NONE"
+
+  def initialize(n, a, j = "NONE")
+    @name = n
+    @age = a
+    @job = j
+  end
+
+  def name= name
+    @name = name
+  end
+  def age= age
+    @age = age
+  end
+  def job= job
+    @job = job
+  end
+  def to_str
+    "I'm #{@name}, my age is #{@age}, my current job is #{@job}"
+  end
+end
+
+## TESTING
+
+p = Person.new "foo", 20
+
+puts p.to_str
