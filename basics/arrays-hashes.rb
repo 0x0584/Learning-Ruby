@@ -79,7 +79,27 @@ people = [
 puts people[0]["id"].to_s + people[0]["name"].to_s
 puts people[1][:id].to_s + people[1][:name]
 
-values = Hash.new(0)
+### PART III: Assigning values 
+##
+
+values = Hash.new(0)            # setting the default value like this
+values.default = 1              # or like this
 values[:foo] = 12
 
-puts values[:foo].to_s + " " + values[:bar].to_s # this should print 0 instead of nil 
+# this should print 0 instead of nil 
+puts values[:foo].to_s + " " + values[:bar].to_s
+
+foo = { height: 15, width: 20 }
+foo[:length] = 19
+foo.store(:cool, 11235813)      # alias of []=
+
+puts foo
+puts foo.values                 # get all values
+
+bar = { foo: [12, 13, 14] }
+puts bar.dig(:foo, 2).to_s      # this dig is very useful! (supported ruby 2.3+)
+
+# create nated hashes
+toz = Hash.new {  |h, k| h[k] = Hash.new &h.default_proc}
+toz[:a][:b][:c] = 1123
+puts toz
