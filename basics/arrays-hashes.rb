@@ -43,8 +43,9 @@ puts some_array
 
 ### PART II Hashes
 ##
-puts "hashes"
-person = Hash.new               # Hash Class
+
+person = Hash.new               # new Hash-Class instance (empty hash)
+#person = {}                     # another way to declare an empty hash
 
 person["id"] = 10
 person["name"] = "foo"
@@ -70,10 +71,15 @@ puts person[:id].to_s + " " + person[:name]
 
 people = [
   # mixed
-  { "id" => 11, "name" => "foo"},
-  { :id => 23, :name => "bar"}
+  { "id" => 11, "name" => { first: "foo", last: "bar" } }, # valid since 1.9+
+  { :id => 23, :name => "bar"},                            # valid in all version
+  { "id": 12, "name": "baz" }                              # valid since 2.2+
 ]
 
-puts people[0]["id"].to_s + people[0]["name"]
+puts people[0]["id"].to_s + people[0]["name"].to_s
 puts people[1][:id].to_s + people[1][:name]
 
+values = Hash.new(0)
+values[:foo] = 12
+
+puts values[:foo].to_s + " " + values[:bar].to_s # this should print 0 instead of nil 
