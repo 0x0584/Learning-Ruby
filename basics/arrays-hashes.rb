@@ -103,3 +103,4 @@ puts bar.dig(:foo, 2).to_s      # this dig is very useful! (supported ruby 2.3+)
 toz = Hash.new {  |h, k| h[k] = Hash.new &h.default_proc}
 toz[:a][:b][:c] = 1123
 puts toz
+

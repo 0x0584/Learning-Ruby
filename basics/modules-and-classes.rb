@@ -24,10 +24,13 @@ puts c.brand("foo")
 ##
 
 class Person
-  # private variables
+  # instace variables
   @name = ""
   @age = 0
   @job = "NONE"
+
+  # class variables
+  @@type = "Person"
 
   # constructor
   def initialize(n, a, j = "NONE")
@@ -68,7 +71,7 @@ end
 
 p = Person.new "foo", 20
 
-puts p.to_str
+puts p.to_str + p.type.to_s
 
 ### PART III: Inheritance
 ##
