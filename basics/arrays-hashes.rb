@@ -41,6 +41,8 @@ puts some_array.compact!
 puts "array"
 puts some_array
 
+puts [1,2,3,4][rand(4)]         # print a random number from the array
+
 ### PART II Hashes
 ##
 
