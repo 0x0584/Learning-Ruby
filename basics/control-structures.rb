@@ -10,9 +10,7 @@ when 42; puts "not nice"
 end
 
 foo = "this is a test"
-case foo
-when "this"                     # literary string
-  puts "nice"
-when /is/                       # regexp
-  puts "include is"
+case foo                         # we ca use the `then` keyword
+when "this" then puts "nice"     # literary string
+when /is/ then puts "include is" # regexp
 end
